@@ -105,4 +105,15 @@ class StudentClass implements StudentClassInterface {
   }
 }
 
+// Interface for the function
+interface printTeacherFunction {
+  (teacher: { firstName: string; lastName: string }): string;
+}
+
+// Function declaration (NOT arrow function)
+function printTeacher(
+  { firstName, lastName }: { firstName: string; lastName: string }
+): string {
+  return `${firstName}. ${lastName}`;
+}
 
