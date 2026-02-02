@@ -61,3 +61,16 @@ const director1: Director = {
 
 console.log(director1);
 
+// Interface for printTeacher function
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+// Function implementation
+const printTeacher: printTeacherFunction = (
+  firstName: string,
+  lastName: string
+): string => {
+  return `${firstName} ${lastName}`;
+};
+
