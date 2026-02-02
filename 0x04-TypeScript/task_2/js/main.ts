@@ -67,3 +67,9 @@ function teachClass(todayClass: Subjects): string {
   }
   return 'Teaching History';
 }
+function createEmployee(salary: number | string): Director | Teacher {
+  if (salary < 500) {
+    return new Teacher();
+  }
+  return new Director();
+}
