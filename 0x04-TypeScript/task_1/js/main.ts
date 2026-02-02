@@ -74,3 +74,35 @@ const printTeacher: printTeacherFunction = (
   return `${firstName} ${lastName}`;
 };
 
+// Interface describing the constructor
+interface StudentClassConstructor {
+  firstName: string;
+  lastName: string;
+}
+
+// Interface describing the class
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+// Class implementation
+class StudentClass implements StudentClassInterface {
+  private firstName: string;
+  private lastName: string;
+
+  constructor({ firstName, lastName }: StudentClassConstructor) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+
